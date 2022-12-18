@@ -1,0 +1,72 @@
+{% extends 'app/links.html' %}
+
+{% load static%}
+
+{% block content %}
+
+<div class="container ">
+    <h1>Python Blogs</h1>
+    <div class="card-columns" style="padding: 10px; margin: 20px;">
+    {% for p in pycontent %}
+        <div class="card" style="width: 18rem; border:5px black solid">
+            <img class="card-img-top" src="{{p.img}}" alt="Card image cap">
+           
+            <div class="card-body">
+            <h5 class="card-title">{{p.headline}}</h5>
+            <a href="{{p.url}}">For more info click here </a>
+            
+            </div>
+        </div>
+     {% endfor %}
+    
+    </div>
+
+    <h1>Programming Blogs</h1>
+    <div class="card-columns" style="padding: 10px; margin: 20px;">
+    {% for p in progcontent %}
+        <div class="card" style="width: 18rem; border:5px black solid">
+            <img class="card-img-top" src="{{p.img}}" alt="Card image cap">
+           
+            <div class="card-body">
+            <h5 class="card-title">{{p.headline}}</h5>
+            <a href="{{p.url}}">For more info click here </a>
+            
+            </div>
+        </div>
+     {% endfor %}
+    
+    </div>
+
+    <h1>Hiring Blogs</h1>
+    <div class="card-columns" style="padding: 10px; margin: 20px;">
+    {% for p in hiringcontent %}
+        <div class="card" style="width: 18rem; border:5px black solid">
+            <img class="card-img-top" src="{{p.img}}" alt="Card image cap">
+           
+            <div class="card-body">
+            <h5 class="card-title">{{p.headline}}</h5>
+            <a href="{{p.url}}">For more info click here </a>
+            
+            </div>
+        </div>
+     {% endfor %}
+    
+    </div>
+
+    <h1>Covid Blogs</h1>
+    <div class="card-columns" style="padding: 10px; margin: 20px;">
+    {% for p in covidcontent %}
+        <div class="card" style="width: 18rem; border:5px black solid">
+            <img class="card-img-top" src="{{p.img}}" alt="Card image cap">
+           
+            <div class="card-body">
+            <h5 class="card-title">{{p.headline}}</h5>
+            <a href="{{p.url}}">For more info click here </a>
+            
+            </div>
+        </div>
+     {% endfor %}
+    
+    </div>
+
+{% endblock %}
